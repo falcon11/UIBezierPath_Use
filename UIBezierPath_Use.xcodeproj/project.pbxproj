@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		E426018B1BFF00B7007B89DE /* UIImage+JJImage.m in Sources */ = {isa = PBXBuildFile; fileRef = E426018A1BFF00B7007B89DE /* UIImage+JJImage.m */; };
 		E464B1321BFE092A004E9C50 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = E464B1311BFE092A004E9C50 /* main.m */; };
 		E464B1351BFE092A004E9C50 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = E464B1341BFE092A004E9C50 /* AppDelegate.m */; };
 		E464B1381BFE092A004E9C50 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = E464B1371BFE092A004E9C50 /* ViewController.m */; };
@@ -16,6 +17,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		E42601891BFF00B7007B89DE /* UIImage+JJImage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIImage+JJImage.h"; sourceTree = "<group>"; };
+		E426018A1BFF00B7007B89DE /* UIImage+JJImage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImage+JJImage.m"; sourceTree = "<group>"; };
 		E464B12D1BFE092A004E9C50 /* UIBezierPath_Use.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = UIBezierPath_Use.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E464B1311BFE092A004E9C50 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		E464B1331BFE092A004E9C50 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
@@ -39,11 +42,30 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		E42601861BFEF665007B89DE /* framework */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = framework;
+			sourceTree = "<group>";
+		};
+		E42601881BFEFFDB007B89DE /* JJImage */ = {
+			isa = PBXGroup;
+			children = (
+				E42601891BFF00B7007B89DE /* UIImage+JJImage.h */,
+				E426018A1BFF00B7007B89DE /* UIImage+JJImage.m */,
+			);
+			name = JJImage;
+			path = UIBezierPath_Use/JJImage;
+			sourceTree = "<group>";
+		};
 		E464B1241BFE092A004E9C50 = {
 			isa = PBXGroup;
 			children = (
+				E42601881BFEFFDB007B89DE /* JJImage */,
 				E464B12F1BFE092A004E9C50 /* UIBezierPath_Use */,
 				E464B12E1BFE092A004E9C50 /* Products */,
+				E42601861BFEF665007B89DE /* framework */,
 			);
 			sourceTree = "<group>";
 		};
@@ -110,7 +132,6 @@
 				TargetAttributes = {
 					E464B12C1BFE092A004E9C50 = {
 						CreatedOnToolsVersion = 7.1;
-						DevelopmentTeam = YGTXB4R2WQ;
 					};
 				};
 			};
@@ -153,6 +174,7 @@
 				E464B1381BFE092A004E9C50 /* ViewController.m in Sources */,
 				E464B1351BFE092A004E9C50 /* AppDelegate.m in Sources */,
 				E464B1321BFE092A004E9C50 /* main.m in Sources */,
+				E426018B1BFF00B7007B89DE /* UIImage+JJImage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -264,10 +286,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UIBezierPath_Use/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "HanJi.UIBezierPath-Use";
+				PRODUCT_BUNDLE_IDENTIFIER = "JJ.UIBezierPath-Use";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Debug;
 		};
@@ -275,10 +301,14 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				INFOPLIST_FILE = UIBezierPath_Use/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				PRODUCT_BUNDLE_IDENTIFIER = "HanJi.UIBezierPath-Use";
+				PRODUCT_BUNDLE_IDENTIFIER = "JJ.UIBezierPath-Use";
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
 			};
 			name = Release;
 		};
@@ -301,6 +331,7 @@
 				E464B1461BFE092A004E9C50 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
